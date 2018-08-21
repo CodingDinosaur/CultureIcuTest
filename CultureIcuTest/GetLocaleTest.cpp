@@ -4,6 +4,7 @@
 GetLocaleTest::GetLocaleTest() = default;
 GetLocaleTest::~GetLocaleTest() = default;
 
+// ReSharper disable CppInconsistentNaming
 extern "C" int32_t GetLocaleTest::GlobalizationNative_GetLocaleName(const UChar* localeName, UChar* value, int32_t valueLength)
 {
 	UErrorCode status = U_ZERO_ERROR;
@@ -121,4 +122,6 @@ UErrorCode GetLocaleTest::u_charsToUChars_safe(const char* str, UChar* value, in
 	u_charsToUChars(str, value, len + 1);
 	return U_ZERO_ERROR;
 }
+
+// ReSharper restore CppInconsistentNaming
 
