@@ -21,18 +21,12 @@
     <ClInclude Include="CultureIcuTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GetLocaleTest.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CultureIcuTest.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GetLocaleTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
