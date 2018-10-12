@@ -1,7 +1,7 @@
 # Demonstration of ICU C/C++ API to Obtain a List of Available Locales
 
-This repo is a sample for dotnet/coreclr issue here: (TBD)
-See also, the main demonstration repo here: (TBD)
+This repo is a sample for dotnet/coreclr issue here: https://github.com/dotnet/coreclr/issues/20388
+See also, the main demonstration repo here: [CodingDinosaur/CultureIssueDemonstration](https://github.com/CodingDinosaur/CultureIssueDemonstration)
 
 This repo contains C/C++ code that utilizes the ICU C & C++ APIs to show that ICU does not return aliases when requesting a list of available locales.
 
@@ -18,7 +18,7 @@ Certain valid locales cannot be used for localization in .NET Core on Unix-based
 
 This affects any locale which is an "aliased" locale in ICU [ICU (International Components for Unicode)](http://site.icu-project.org/home).
 
-For a more thorough discussion of the issue, check the main demo repo here: (TBD)
+For a more thorough discussion of the issue, check the main demo repo here: [CodingDinosaur/CultureIssueDemonstration](https://github.com/CodingDinosaur/CultureIssueDemonstration)
 
 # Issue Cause Summarized
 To summarize what appears to be the cause of the issue:
@@ -29,7 +29,7 @@ To summarize what appears to be the cause of the issue:
 - Some Culture concerns in mscorlib currently depend on getting an up-front list of all available cultures.
 - **`CultureData.EnumCultures`, which in turn via native interop calls the ICU C API `uloc_getAvailable`, therefore fails to obtain any cultures which are defined as aliases in ICU, and these cultures become invalid or are populated with incorrect data in various contexts.**
 
-Further details can be found in the main demo repo here: (TBD)
+Further details can be found in the main demo repo here: [CodingDinosaur/CultureIssueDemonstration](https://github.com/CodingDinosaur/CultureIssueDemonstration)
 
 ## CultureInfo & The Culture List
 
